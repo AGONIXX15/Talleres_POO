@@ -2,12 +2,11 @@
 #include "include/auto.h"
 #include <iostream>
 
-
 int main()
 {
- Auto obj("nissan","volador",2024,5);
+Auto obj("nissan","volador",2024,5);
 		std::cout << obj << std::endl;
 		obj.abrir_maletero();
 		obj.acelerar();
 	return 0;
-}
+} 

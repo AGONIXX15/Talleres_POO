@@ -5,16 +5,19 @@
 class Auto : public Vehiculo 
 {
 	public:
-		int Tires;
-		int Doors;
-		int Mirrors;
 
-		Auto(std::string ,std::string ,int, int );
+		Auto(std::string brand ,std::string model ,int sits,int year,int lights );
 			
 		friend std::ostream& operator<<(std::ostream& obj,const Auto& car);
 		
 		void abrir_maletero();
-		
+		void abrir_puerta();
+		void prender_luces();
+
+		int Tires;
+		int Doors;
+		int Mirrors;
+		int Lights;
 
 };
 

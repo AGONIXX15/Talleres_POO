@@ -6,18 +6,19 @@
 class Vehiculo 
 {
 public:
-  Vehiculo(std::string, std::string, int);
+  Vehiculo(std::string Brand, std::string Model,int Sits, int Year);
 
 	void acelerar();
 
- void frenar();
+ 	void frenar();
 	
   friend std::ostream &operator<<(std::ostream &os, const Vehiculo &v);
 
-
-  std::string Marca;
-  std::string Modelo;
+  std::string Brand;
+  std::string Model;
   int Year;
+	int Sits;
+
 };
 
 #endif // VEHICULO_H
