@@ -1,0 +1,11 @@
+void menu();
+void menu_vehiculo();
+void menu_auto();
+void menu_deportivo();
+void menu_convertible();
+void menu_motocicleta();
+void menu_bicicleta();
+void menu_scooter();
+void menu_camion();
+void menu_mula();
+void menu_camion_basura();
