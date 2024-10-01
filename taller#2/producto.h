@@ -8,12 +8,14 @@ class producto{
     string nombre;
     int cantidad;
     float precio;
+    int id=0;   
+   
     producto();
     
 
-    void hola();
     void set_info();
-    void mostrar_info();    
+    void mostrar_info();
+    void id_producto();    
     
 
 };

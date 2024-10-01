@@ -4,12 +4,10 @@
 using namespace std;
 
 int main(){
-    producto p;
-    vector_producto v;
-    
-    v.menu_productos();
-    
-
-    return 0;
+    producto p1;
+    vector_producto v1;
+    v1.menu_productos();
+    v1.guardar_producto(p1);
+   
 }
 
