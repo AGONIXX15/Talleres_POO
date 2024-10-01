@@ -1,13 +1,11 @@
-#include "include/vehiculo.h"
-#include "include/auto.h"
-#include <iostream>
+#include <Menus.h>
 
 
 int main()
 {
- Auto obj("nissan","volador",2024,5);
-		std::cout << obj << std::endl;
-		obj.abrir_maletero();
-		obj.acelerar();
+	menu();
 	return 0;
-}
+} 
+
+
+

@@ -1,0 +1,6 @@
+#ignorar todos los ejecutables
+*.out
+*.exe
+
+.cache
+compile_commands.json
