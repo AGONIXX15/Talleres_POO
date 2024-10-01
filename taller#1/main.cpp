@@ -9,6 +9,5 @@ int main()
 		std::cout << obj << std::endl;
 		obj.abrir_maletero();
 		obj.acelerar();
-		obj.frenar();
 	return 0;
 }
