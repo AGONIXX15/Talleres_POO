@@ -37,3 +37,5 @@ void Persona::set_info()
 	set_fecha();
 	set_edad();
 }
+
+	 std::ostream& operator<<(std::ostream& os,const Persona& p);

@@ -2,7 +2,6 @@
 #define CRUD_H
 
 
-
 class Crud 
 {
 	virtual void crear() = 0; 
