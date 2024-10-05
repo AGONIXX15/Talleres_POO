@@ -1,7 +1,7 @@
 #include <iostream>
 #include "producto.h"
 #include "vector_producto.h"
-#include <random>
+
 using namespace std;
 
 // clase producto
@@ -10,15 +10,40 @@ producto::producto(){
 
 };
 
+void producto::set_nombre(){
+    string nombre;
+    cout << "Ingrese el nombre del producto: ";
+    cin >> nombre;
+    this->nombre = nombre;
+
+}
+
+void producto::set_cantidad(){
+    int cantidad;
+    cout << "Ingrese la cantidad del producto: ";
+    cin>>cantidad;
+    cin.ignore();
+    this->cantidad  = cantidad;
+
+}
+
+void  producto::set_precio(){
+    int  precio;
+    cout<< "Ingrese el precio del producto: ";
+    cin>>precio;
+    cin.ignore();
+    this->precio = precio;  
+
+
+
+}
+
 
 
 void producto::set_info(){
-    cout << "Ingrese el nombre del producto: ";
-    cin >> nombre;
-    cout << "Ingrese la cantidad del producto: ";
-    cin >> cantidad;
-    cout << "Ingrese el precio del producto: ";
-    cin >> precio;
+    set_nombre();
+    set_cantidad();
+    set_precio();
     id_producto();
 }
 
@@ -37,4 +62,8 @@ void producto::id_producto(){
     cout << "ID: " <<this->id<< endl;
 }   
 
+
+int producto::get_id(){
+    return id;
+}
 

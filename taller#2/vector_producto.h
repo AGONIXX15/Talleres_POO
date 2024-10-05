@@ -4,18 +4,25 @@
 
 #include <vector>
 #include "producto.h"
+#include "Crud.h"
 
 
 
 
-class vector_producto {
+class Vector_producto:public Crud {
 public:
     std::vector<producto> productos;
 
-    vector_producto();
+    Vector_producto();
+    void crear() override;
+    void actualizar()  override;
+    void eliminar()  override;
 
-    void guardar_producto(producto p);
-    void mostrar_productos();
+    void crear(producto p) ;
+    void leer() override;
+    void actualizar(int id);
+    void eliminar(int id) ;
+
     void menu_productos();
 
     

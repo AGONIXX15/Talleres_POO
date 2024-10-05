@@ -12,10 +12,13 @@ class producto{
    
     producto();
     
-
+    void set_nombre();
+    void set_cantidad();
+    void set_precio();
     void set_info();
     void mostrar_info();
-    void id_producto();    
+    void id_producto();   
+    int get_id(); 
     
 
 };
