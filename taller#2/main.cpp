@@ -1,11 +1,14 @@
-#include "include/Persona.h"
-#include <iostream> 
-
+#include "include/Cliente.h"
+#include "include/Vector_empleado.h"
+#include <iostream>
+#include <vector>
 
 int main()
 {
-	Persona p;
-	p.set_info();
-	return 0;
-
+	Vector_empleado v;
+	v.crear();
+	v.crear();
+	v.eliminar();
+	v.leer();
+return 0;
 }
