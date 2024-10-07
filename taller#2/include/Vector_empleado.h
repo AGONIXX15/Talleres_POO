@@ -19,6 +19,6 @@ class Vector_empleado: public Crud
 		std::vector<Empleado> vector;
 		
 };
-
+//clase
 
 #endif
