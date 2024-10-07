@@ -1,6 +1,7 @@
 #include "../include/Persona.h"
 #include <regex>
 
+
 Persona::Persona(){}
 // setear el nombre de la persona 
 void Persona::set_nombre()

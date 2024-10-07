@@ -13,7 +13,7 @@ Auto::Auto(std::string brand,std::string model,
 
 void Auto::manejar()
 {
-	std::cout << "Manejando el Autos" << std::endl;
+	std::cout << "Manejando el Auto" << std::endl;
 }
 
 void Auto::abrir_maletero()
