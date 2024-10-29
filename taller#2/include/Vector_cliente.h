@@ -2,25 +2,21 @@
 #define VECTOR_CLIENTE_H
 #include <vector>
 
-
-
-#include "Crud.h"
 #include "Cliente.h"
-class Vector_cliente : public Crud
-{
-	public:
-		Vector_cliente();
-		void crear() override;
-		void crear(Cliente& c) ;
-		void eliminar() override ;
-		void eliminar(const int& id);
-		void actualizar() override;
-		void actualizar(const int& id);
-		void leer() override;
-		std::vector<Cliente> v;
-		
+#include "Crud.h"
+class Vector_cliente : public Crud {
+public:
+  Vector_cliente();
+  void crear() override; 
+  void eliminar() override; // elimina un cliente
+
+  void crear(Cliente &c); // crea un cliente
+  void eliminar(const int &id); // elimina un cliente
+  void actualizar() override; // actualiza la informacion de los clientes
+  void actualizar(const int &id); // actualiza la informacion de los clientes
+  void leer() override; // muestra la informacion de los clientes
+
+  std::vector<Cliente> v; // vector de clientes
 };
-
-
 
 #endif
