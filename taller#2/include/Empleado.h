@@ -11,25 +11,26 @@ class Empleado : public Persona
 {
 	public:
 	Empleado();
-	void atender();
-	void organizar();
-	void set_salario();
-	void set_horario();
-	void set_id();
-	void set_info() override;
-	void mostrar_info() override;
-	bool operator<(const Empleado &empleado) const;
-	bool operator<(const int&) const;
-	bool operator==(const Empleado &empleado) const;
-	bool operator==(const int&) const;
+	void atender(); // atención al cliente
+	void organizar(); // organizar productos
+	void set_salario(); // establecer salario
+	void set_horario(); // establecer horario
+	void set_id(); // establecer id
+	void set_info() override; // establecer información
+	void mostrar_info() override; // mostrar información
+	void vender(); // vender productos
 
+	bool operator<(const Empleado &empleado) const; // sobrecarga de operador
+	// para comparar empleados
+	bool operator<(const int&) const; // sobrecarga de operador < 
+	// para comparar empleados con un entero(id)
+	bool operator==(const Empleado &empleado) const; // sobrecarga de operador ==
+	bool operator==(const int&) const; // sobrecarga de operador ==
 
 	float salario;
 	std::string horario;
 	int id;
 	static int global_id;
-	
-
 };
 
 

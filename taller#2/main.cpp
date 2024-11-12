@@ -1,31 +1,16 @@
-<<<<<<< HEAD
-#include "include/Cliente.h"
 #include "include/Vector_empleado.h"
 #include <iostream>
-#include <vector>
+#include <cstdlib>
 
 int main()
 {
 	Vector_empleado v;
 	v.crear();
 	v.crear();
-	v.eliminar();
+	std::cout << "leyendo desde v1"<< std::endl;
 	v.leer();
-return 0;
-=======
-#include <iostream>
-#include "producto.h"
-#include "vector_producto.h"
-#include "Persona.h"
-#include "Empleado.h"
-
-using namespace std;
-
-int main(){
-    producto p1;
-    Vector_producto v1;
-    v1.menu_productos();
-    v1.crear(p1);
->>>>>>> DEVIA
+	Vector_empleado v1;
+	std::cout << "leyendo desde v2"<< std::endl;
+	v1.leer();
+	return 0;
 }
-
