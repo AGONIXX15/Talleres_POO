@@ -2,6 +2,7 @@
 #define MENU_H
 
 
+#include "Facturas.h"
 class Menu {
 public:
   Menu();
@@ -10,7 +11,7 @@ public:
   void menu_empleado();
   void menu_clientes();
   void menu_facturas();// terminar de implementar
-
+  void ver_factura(Facturas f);
 
   // mejorar aspecto del menu xd
   void menu_general();

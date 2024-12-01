@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-I./include -std=c++11
+CFLAGS= -Wall -I./include -std=c++11
 OUTPUT_DIR=build
 OUTPUT_FILE=main
 

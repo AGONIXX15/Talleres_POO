@@ -48,6 +48,7 @@ void Facturas::generar_fecha() {
 }
 
 void Facturas::generar_factura() {
+  generar_fecha();
   std::cout << "___________________________" << std::endl;
   std::cout << "Fecha: " << fecha << std::endl;
   std::cout << "Nombre: " << cliente_nombre << std::endl;
@@ -58,7 +59,7 @@ void Facturas::generar_factura() {
       std::cout << i << " ";
     }
   }
-  std::cout << "___________________________\n";
+  std::cout << "\n___________________________\n";
   std::cout << "Total: " << total_factura << std::endl;
   std::cout << "Pago: " << pago_ccliente << std::endl;
   cambio = pago_ccliente - total_factura;

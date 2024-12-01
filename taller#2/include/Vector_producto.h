@@ -10,7 +10,8 @@
 class Vector_producto : public Crud {
 public:
   Vector_producto();          // constructor
-  void crear() override;      // metodos de la clase Crud
+  void crear() override;
+ static void crear(bool) ;      // metodos de la clase Crud
   void actualizar() override; // metodos de la clase Crud
   void eliminar() override;   // metodos de la clase Crud
    void leer() override;       // muestra los productos del vector
