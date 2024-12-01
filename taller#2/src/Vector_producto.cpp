@@ -11,6 +11,7 @@ std::vector<producto> Vector_producto::productos;
 void Vector_producto::crear() {}
 void Vector_producto::actualizar() {}
 void Vector_producto::eliminar() {}
+void Vector_producto::leer() {}
 
 // agrega un producto al vector productos
 void Vector_producto::crear(producto& p) {
@@ -18,7 +19,7 @@ void Vector_producto::crear(producto& p) {
   Vector_producto::productos.push_back(p);
 }
 
-void Vector_producto::leer() {
+void Vector_producto::mostrar_info() {
 
   for (int i = 0; i < Vector_producto::productos.size(); i++) {
     std::cout << "-------------------" << std::endl;
@@ -67,10 +68,10 @@ void Vector_producto::menu_productos() {
     switch (opcion) {
     case 1:
       p.set_info();
-      crear(p);
+        Vector_producto::crear(p);
       break;
     case 2:
-      leer();
+        Vector_producto::mostrar_info();
       break;
     case 3:
 
@@ -83,7 +84,7 @@ void Vector_producto::menu_productos() {
       std::cout << "ingrese la id del  producto a eliminar: ";
       cin >> id_producto;
       cin.ignore();
-      eliminar(id_producto);
+        Vector_producto::eliminar(id_producto);
       break;
     case 5:
       std::cout << "saliendo bb" << std::endl;
