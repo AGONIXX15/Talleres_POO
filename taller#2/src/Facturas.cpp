@@ -1,48 +1,68 @@
 #include "../include/Facturas.h"
+#include "../include/producto.h"
+
+#include <ctime>
 #include <iostream>
 #include <limits>
-#include <ctime>
+#include <string>
 
+Facturas::Facturas() {}
 
-Facturas::Facturas(){}
+// nombre, id, carrito, fecha, total_factura, pago_cliente, cambio, id_factura
 
+void Facturas::añadir_carrito(producto p) {
+  std::string id = std::to_string(p.id);
+  std::string nombre = p.nombre;
+  std::string cantidad = std::to_string(p.cantidad);
+  std::string precio = std::to_string(p.precio);
+  carrito.push_back({id, nombre, cantidad, precio});
+}
 
-//nombre, id, carrito, fecha, total_factura, pago_cliente, cambio, id_factura
-
-void Facturas::generar_total(){
-  total_factura = 0; 
-  for (const auto& i : carrito){
-    if (i.size()>= 3){
-        float cantidad = std::stoi(i[1]);
-        float precio = std::stof(i[2]);
-        total_factura += cantidad * precio; 
-    }else {
+void Facturas::generar_total() {
+  total_factura = 0;
+  for (const auto &i : carrito) {
+    if (i.size() >= 3) {
+      float cantidad = std::stoi(i[2]);
+      float precio = std::stof(i[3]);
+      total_factura += cantidad * precio;
+    } else {
       std::cout << "Error en el carrito" << std::endl;
     }
   }
 }
-void Facturas::pago_cliente(){
-  std::cout <<"ingrese el pago: ";
-  while(!(std::cin >> pago_ccliente)){
-    std::cout<<"Entrada invalida, ingrese un numero subnormal"; 
-    std::cin.clear(); 
+
+void Facturas::pago_cliente() {
+  std::cout << "ingrese el pago: ";
+  while (!(std::cin >> pago_ccliente)) {
+    std::cout << "Entrada invalida, ingrese un numero subnormal";
+    std::cin.clear();
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
   }
 }
 
-void Facturas::generar_fecha(){
+void Facturas::generar_fecha() {
   time_t now = time(0);
   tm *ltm = localtime(&now);
-  fecha = std::to_string(1900 + ltm->tm_year) + "/" + std::to_string(1 + ltm->tm_mon) + "/" + std::to_string(ltm->tm_mday);
+  fecha = std::to_string(1900 + ltm->tm_year) + "/" +
+          std::to_string(1 + ltm->tm_mon) + "/" + std::to_string(ltm->tm_mday);
 }
 
-void Facturas::generar_factura(){
+void Facturas::generar_factura() {
+  std::cout << "___________________________" << std::endl;
+  std::cout << "Fecha: " << fecha << std::endl;
   std::cout << "Nombre: " << cliente_nombre << std::endl;
   std::cout << "ID: " << id_cliente << std::endl;
-  std::cout << "Fecha: " << fecha << std::endl;
+  std::cout << "___________________________\n";
+  for (auto &row : carrito) {
+    for (auto &i : row) {
+      std::cout << i << " ";
+    }
+  }
+  std::cout << "___________________________\n";
   std::cout << "Total: " << total_factura << std::endl;
   std::cout << "Pago: " << pago_ccliente << std::endl;
   cambio = pago_ccliente - total_factura;
   std::cout << "Cambio: " << cambio << std::endl;
   std::cout << "ID Factura: " << id_factura << std::endl;
+  std::cout << "___________________________" << std::endl;
 }

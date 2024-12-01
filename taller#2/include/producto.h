@@ -9,7 +9,6 @@ class producto{
     int cantidad; // cantidad de producto en stock
     float precio; // precio del producto
     int id=0;   // id del producto
-   
     producto(); // constructor
     
     void set_nombre(); // asignar nombre al producto

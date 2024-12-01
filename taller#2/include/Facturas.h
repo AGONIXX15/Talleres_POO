@@ -2,14 +2,18 @@
 #define FACTURAS_H
 #include <string>
 #include <vector>
+#include "../include/producto.h"
+
 
 class Facturas {
 public:
   Facturas(); // constructor de la clase
+  void añadir_carrito(producto p);
   void pago_cliente(); // metodo para ingresar el pago del cliente
   void generar_total(); // genera el total de la factura
   void generar_fecha(); // genera la fecha de la factura
   void generar_factura(); // genera la factura
+  
 
   std::string cliente_nombre; // nombre del cliente
   int id_cliente; // id del cliente

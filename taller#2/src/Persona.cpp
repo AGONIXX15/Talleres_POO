@@ -21,7 +21,7 @@ void Persona::set_fecha() {
   while (true) {
     std::string fecha;
     std::cout << "ingrese su fecha de nacimiento en el formato(dd/mm/yyyy) : "
-              << std::endl;
+    << std::endl;
     std::cin >> fecha;
 		// si la fecha esta en el formato correcto se asigna a la variable fecha y se sale del bucle
     if (std::regex_match(fecha, comprobar)) {
