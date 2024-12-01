@@ -15,6 +15,7 @@ public:
   void actualizar() override; // actualiza la informacion de los clientes
   void actualizar(const int &id); // actualiza la informacion de los clientes
   void leer() override; // muestra la informacion de los clientes
+  static void menu_clientes(); // menu de clientes
 
   std::vector<Cliente> v; // vector de clientes
 };

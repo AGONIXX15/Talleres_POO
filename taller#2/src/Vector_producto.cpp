@@ -57,7 +57,7 @@ void Vector_producto::menu_productos() {
   do {
 
     std::cout << "1. Ingresar producto" << std::endl;
-    std::cout << "2. Mostrar Vector_producto::productos" << std::endl;
+    std::cout << "2. Mostrar productos del inventario" << std::endl;
     std::cout << "3. actulizar producto" << std::endl;
     std::cout << "4. eliminar  producto" << std::endl;
     std::cout << "5. salir" << std::endl;

@@ -19,6 +19,7 @@ class Empleado : public Persona
 	void set_info() override; // establecer información
 	void mostrar_info() override; // mostrar información
 	void vender(); // vender productos
+	static void menu_empleados(); // menú de empleados
 
 	bool operator<(const Empleado &empleado) const; // sobrecarga de operador
 	// para comparar empleados

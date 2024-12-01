@@ -66,3 +66,34 @@ void Facturas::generar_factura() {
   std::cout << "ID Factura: " << id_factura << std::endl;
   std::cout << "___________________________" << std::endl;
 }
+
+
+void Facturas::menu_factura() {
+  int opc;
+  do {
+    std::cout << "1.mostrar vector de facturas" << std::endl;
+    std::cout << "2. eliminar facturas" << std::endl;
+    std::cout << "0. salir" << std::endl;
+    std::cin >> opc;
+    std::cin.ignore();
+    switch (opc) {
+
+      case 1: {
+        // implementar mostrar vector de facturas
+        break;
+      }
+      case 2: {
+        // implementar eliminar facturas
+        break;
+      }
+      case 0: {
+        std::cout << "saliendo del menu de facturas" << std::endl;
+        break;
+      } 
+    default:
+      std::cout << "opcion invalida" << std::endl;
+      break;
+    }
+  } while (opc != 0);
+  
+}

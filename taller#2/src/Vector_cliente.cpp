@@ -92,3 +92,37 @@ void Vector_cliente::leer() {
     i.mostrar_info();
   }
 }
+
+void Vector_cliente::menu_clientes() {
+  int opc;
+  Vector_cliente vc;
+  do {
+    std::cout << "1. crear cliente" << std::endl;
+    std::cout << "2. eliminar cliente" << std::endl;
+    std::cout << "3. actualizar cliente" << std::endl;
+    std::cout << "4. leer clientes" << std::endl;
+    std::cout << "5. acciones de cliente" << std::endl;
+    std::cout << "0. salir" << std::endl;
+    std::cout << "ingrese una opcion para continuar: ";
+    std::cin >> opc;
+    std::cin.ignore();
+
+    switch (opc) {
+    case 1:
+      vc.crear();
+      break;
+    case 2:
+      vc.eliminar();
+      break;
+    case 3:
+      vc.actualizar();
+      break;
+    case 4:
+      vc.leer();
+      break;
+    case 5:
+      Cliente::menu_clientes();
+      break;  
+    }
+  } while (opc != 0);
+}

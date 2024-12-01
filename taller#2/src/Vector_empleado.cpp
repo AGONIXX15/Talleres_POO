@@ -91,3 +91,52 @@ void Vector_empleado::leer()
 		i.mostrar_info();
 	}
 }
+
+
+void Vector_empleado::menu_empleados(){
+  int opc;
+	Vector_empleado obj;
+  do{
+    
+    
+    std::cout<<"1. ingresar empleado al sistema"<<std::endl;
+    std::cout<<"2. eliminar empleado"<<std::endl;
+    std::cout<<"3. actualizar empleado"<<std::endl;
+	std::cout<<"4. mostrar empleados"<<std::endl;
+	std::cout<<"5.acciones empleado"<<std::endl;
+	std::cout<<"0. salir"<<std::endl;
+    std::cout<<"ingrese una opcion para continuar: ";
+    std::cin>>opc;
+    std::cin.ignore();
+
+    switch(opc){
+      case 1:
+        obj.crear();
+        break;
+      case 2:
+        obj.eliminar();
+        break;
+      case 3:
+        obj.actualizar();
+        break;
+      case 4:
+       obj.leer();
+        break;
+      
+      case 5:
+	  // vas al menu de empleados de la clase 
+        Empleado::menu_empleados();
+        break;
+	case 0:
+		std::cout<<"saliendo del menu de empleados"<<std::endl;
+      default:
+        std::cout<<"opcion no valida"<<std::endl;
+        break;
+
+    }
+    
+
+  }
+  while(opc!=0);
+
+}

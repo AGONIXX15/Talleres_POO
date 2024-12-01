@@ -13,6 +13,8 @@ public:
   void generar_total(); // genera el total de la factura
   void generar_fecha(); // genera la fecha de la factura
   void generar_factura(); // genera la factura
+
+  void menu_factura(); // menu de la factura
   
 
   std::string cliente_nombre; // nombre del cliente

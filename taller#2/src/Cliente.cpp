@@ -32,7 +32,8 @@ void Cliente::set_id() {
 }
 
 void Cliente::comprar() {
-  // implementar comprar para el cliente cuando ya este lo demas
+  // implementar de manera correcta este metodo :)
+  std::cout << "comprando bby..." << std::endl;
   return;
 }
 
@@ -54,6 +55,38 @@ void Cliente::mostrar_info() {
   std::cout << "dinero : " << this->dinero << std::endl;
   return;
 }
+
+void Cliente::menu_clientes() {
+  int opc;
+  Cliente obj;
+  do{
+    std::cout << "1. ingresar valores de incliente" << std::endl;
+    std::cout << "2. mostrar informacion del cliente" << std::endl;
+    std::cout << "3. realizar compra" << std::endl;
+    std::cout << "0. salir" << std::endl;
+    std::cin >> opc;
+  
+  switch(opc){
+    case 1:
+      obj.set_info();
+      break;
+    case 2:
+      obj.mostrar_info();
+      break;
+    case 3:
+      obj.comprar();
+      break;
+    case 0:
+      std::cout << "saliendo del menu de clientes" << std::endl;
+      break;
+    default:
+      std::cout << "opcion no valida" << std::endl;
+      break;
+    }
+  }while (opc != 0);
+
+}
+
 
 // sobrecarga de operador para comparar con otro cliente (<) por id
 bool Cliente::operator<(const Cliente &other) { return this->id < other.id; }

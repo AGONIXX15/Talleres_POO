@@ -49,6 +49,10 @@ void Empleado::set_info() {
   set_id();
   return;
 }
+void Empleado::vender(){
+  std::cout<<" estas vendiendo"<<std::endl;
+  return;
+}
 
 // muestra la informacion del empleado
 void Empleado::mostrar_info() {
@@ -58,6 +62,43 @@ void Empleado::mostrar_info() {
             << std::endl;
   return;
 }
+void Empleado::menu_empleados(){
+  int opc;
+  Empleado empleado;
+  do{
+    
+    std::cout<<"1. atender"<<std::endl;
+    std::cout<<"2. organizar"<<std::endl;
+    std::cout<<"3. vender"<<std::endl;
+    std::cout<<"0. salir"<<std::endl;
+    std::cout<<"ingrese una opcion para continuar: ";
+    std::cin>>opc;
+    std::cin.ignore();
+
+    switch(opc){
+      case 1:
+        empleado.atender();
+        break;
+      case 2:
+        empleado.organizar();
+        break;
+      case 3:
+        empleado.vender();
+        break;
+      
+      default:
+        std::cout<<"opcion no valida"<<std::endl;
+        break;
+
+    }
+    
+
+  }
+  while(opc!=0);
+
+}
+
+
 
 // sobrecarga de operador para comparar con otro empleado (<) por id
 bool Empleado::operator<(const Empleado &empleado) const {

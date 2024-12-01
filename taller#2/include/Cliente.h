@@ -14,6 +14,7 @@ public:
   void comprar(); // comprar productos
   void set_info() override; // establecer información
   void mostrar_info() override; // mostrar información
+  static void menu_clientes(); // menú de clientes
 
   bool operator<(const Cliente &other); // sobrecarga de operador
   bool operator<(const int &) const; // sobrecarga de operador <

@@ -15,6 +15,7 @@ public:
   void actualizar() override;
   void actualizar(const int &id);
   void leer() override;
+  static void menu_empleados();
   std::vector<Empleado> vector;
 };
 // clase
