@@ -1,20 +1,22 @@
 #ifndef MENU_H
 #define MENU_H
-
-
+#include "Cliente.h"
 #include "Facturas.h"
+
+
 class Menu {
 public:
   Menu();
-  void menu_compra();
-  void menu_productos();  
-  void menu_empleado();
-  void menu_clientes();
-  void menu_facturas();// terminar de implementar
-  void ver_factura(Facturas f);
+  static void menu_compra(Cliente& obj);
+  static void menu_productos();  
+  static void menu_empleado();
+  static void menu_clientes();
+  static void menu_facturas();// terminar de implementar
+  static void ver_factura(Facturas& f);
+  static void iniciar_sesion_cliente();
 
   // mejorar aspecto del menu xd
-  void menu_general();
+  static void menu_general();
   
   
 };
